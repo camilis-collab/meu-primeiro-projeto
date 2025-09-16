@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    <h1meta charset="utf-8">
+        <title>exemplo grid</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <h1>meu primeiro grid</h1>
+                <div class="grid-container">
+                    <div class="grid-item"></div>
+                    <div class="grid-item"> <button onclick="mostrarGatinho()">Mostre-me um gatinho!</button>
+    
+
+    <script>
+        function mostrarGatinho() {
+            fetch('https://api.thecatapi.com/v1/images/search')
+                .then(response => response.json())
+                .then(data => {
+                    const gatinhoUrl = data[0].url;
+                    const gatinhoContainer = document.getElementById('gatinhoContainer');
+                    gatinhoContainer.innerHTML = `<img src="${gatinhoUrl}" alt="Gatinho" style="max-width: 300px;"/>`;
+                })
+                .catch(error => console.error('Erro ao buscar gatinho:', error));
+        }
+    </script></div>
+                    <div class="grid-item"> </div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"><div id="gatinhoContainer"></div></div>
+                    <div class="grid-item"></div>
+                </div>
+            </body>
+            </html>
