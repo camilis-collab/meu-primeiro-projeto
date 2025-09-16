@@ -1,0 +1,19 @@
+body{ 
+    font-family: arial, sans_serif;
+    text-align: center;
+}
+.grid-container {
+    display: grid; /* define e container
+    como grid */
+    grid-template-columns: repeat(3,1fr); /* 3 colunas iguais */
+    gap: 10px; /* espaço entre os itens */
+    max-width: 600px;
+    margin: 20px auto;
+}
+.grid-item {
+    background-color: lightblue;
+    padding: 40px 0;
+    font-size: 24px;
+    border-radius: 8px;
+}
+        
